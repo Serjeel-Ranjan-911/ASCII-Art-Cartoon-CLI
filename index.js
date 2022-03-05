@@ -48,7 +48,11 @@ export const phraze = async (message, ascii = "casper") => {
 		);
 		console.log(gradients[gradient](asciiCharater));
 	} catch (err) {
-		console.log(err);
-		console.error("Unable to find " + ascii + " ASCII art");
+		//get random gradient
+		let gradient =
+			gradientsOptions[Math.floor(Math.random() * gradientsOptions.length)];
+		console.error(gradients[gradient]("Opps! Something went wrong\n"));
+		console.error("Try to check if " + ascii + " is a valid character\n");
+		console.error("	phraze --help");
 	}
 };
