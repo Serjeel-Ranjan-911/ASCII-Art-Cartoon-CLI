@@ -1,0 +1,22 @@
+{
+  "name": "phraze",
+  "version": "1.0.0",
+  "description": "ASCII cartoon characters",
+  "main": "index.js",
+  "type": "module",
+  "bin": "cli.js",
+  "keywords": [
+    "ASCII",
+    "ART",
+    "CLI",
+    "CARTOON",
+    "CHARACTER"
+  ],
+  "author": "Serjeel Ranjan",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^6.2.1",
+    "gradient-string": "^2.0.0",
+    "taketalk": "^1.0.0"
+  }
+}

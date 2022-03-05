@@ -1,0 +1,42 @@
+[
+	{
+		"name": "casper",
+		"messageLeftMargin": 10
+	},
+	{
+		"name": "bart",
+		"messageLeftMargin": 10
+	},
+	{
+		"name": "popeye",
+		"messageLeftMargin": 15
+	},
+	{
+		"name": "spongebob",
+		"messageLeftMargin": 32
+	},
+	{
+		"name": "homer",
+		"messageLeftMargin": 10
+	},
+	{
+		"name": "garfield",
+		"messageLeftMargin": 20
+	},
+	{
+		"name": "fred",
+		"messageLeftMargin": 23
+	},
+	{
+		"name": "squidward",
+		"messageLeftMargin": 25
+	},
+	{
+		"name": "pup",
+		"messageLeftMargin": 7
+	},
+	{
+		"name": "dachshund",
+		"messageLeftMargin": 20
+	}
+]
