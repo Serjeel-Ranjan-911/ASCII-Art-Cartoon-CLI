@@ -1,5 +1,5 @@
-import fs from "fs";
 import path from "path";
+import fs from "fs";
 
 export const readLocalFile = async (path) => {
 	let file = await fs.promises.readFile(path);

@@ -1,5 +1,20 @@
 import gradient from "gradient-string";
 
+export let gradientsOptions = [
+	"cristal",
+	"teen",
+	"mind",
+	"morning",
+	"vice",
+	"passion",
+	"fruit",
+	"instagram",
+	"atlas",
+	"retro",
+	"summer",
+	"pastel",
+];
+
 const cristal = (str) => {
 	return gradient.cristal(str);
 };

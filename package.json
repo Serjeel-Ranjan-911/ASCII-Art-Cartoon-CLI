@@ -1,22 +1,31 @@
 {
-  "name": "phraze",
-  "version": "1.0.0",
-  "description": "ASCII cartoon characters",
-  "main": "index.js",
-  "type": "module",
-  "bin": "cli.js",
-  "keywords": [
-    "ASCII",
-    "ART",
-    "CLI",
-    "CARTOON",
-    "CHARACTER"
-  ],
-  "author": "Serjeel Ranjan",
-  "license": "ISC",
-  "dependencies": {
-    "boxen": "^6.2.1",
-    "gradient-string": "^2.0.0",
-    "taketalk": "^1.0.0"
-  }
+	"name": "phraze",
+	"version": "1.0.0",
+	"description": "ASCII cartoon characters",
+	"main": "index.js",
+	"bin": "cli.js",
+	"type":"module",
+	"keywords": [
+		"ASCII",
+		"ART",
+		"CLI",
+		"CARTOON",
+		"CHARACTER"
+	],
+	"files": [
+		"index.js",
+		"cli.js",
+		"data.json",
+		"gradients.js",
+		"utilities.js",
+		"package.json",
+		"ASCII"
+	],
+	"author": "Serjeel Ranjan",
+	"license": "ISC",
+	"dependencies": {
+		"boxen": "^6.2.1",
+		"gradient-string": "^2.0.0",
+		"taketalk": "^1.0.0"
+	}
 }

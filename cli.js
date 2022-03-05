@@ -2,7 +2,9 @@
 import taketalk from "taketalk";
 import { phraze } from "./index.js";
 import { readLocalFile } from "./utilities.js";
-import path from "path";
+import { URL } from "url";
+import gradients from "./gradients.js";
+import { gradientsOptions } from "./gradients.js";
 
 taketalk({
 	init(input, options) {
@@ -18,15 +20,24 @@ taketalk({
 		Example
 			$ phraze 'Hi this is casper' casper
 		`);
-		const file = await readLocalFile(path.join(process.cwd(), "data.json"));
+		const file = await readLocalFile(
+			new URL("./data.json", import.meta.url).pathname
+		);
 		const data = JSON.parse(file);
 
 		console.log("Try from the following chracters :- \n");
-		console.log(data.map(character => character.name).join(", "));
 
+		//get random gradient
+		let gradient =
+			gradientsOptions[Math.floor(Math.random() * gradientsOptions.length)];
+		console.log(
+			gradients[gradient](data.map((character) => character.name).join(", "))
+		);
 	},
 	version: async () => {
-		const file = await readLocalFile(path.join(process.cwd(), "package.json"));
+		const file = await readLocalFile(
+			new URL("./package.json", import.meta.url).pathname
+		);
 		const pkg = JSON.parse(file);
 		console.log(pkg.version);
 	},
