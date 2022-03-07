@@ -4,6 +4,7 @@
 
 ![GitHub contributors](https://img.shields.io/github/contributors/Serjeel-Ranjan-911/ASCII-Art-Cartoon-CLI?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/Serjeel-Ranjan-911/ASCII-Art-Cartoon-CLI?style=for-the-badge)
+![npm](https://img.shields.io/npm/dt/phraze?color=%23CB3837&label=Downloads%20on%20NPM&logo=npm&logoColor=%23CB3837&style=for-the-badge)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-yellow.svg?style=for-the-badge)](http://makeapullrequest.com)
 
 </div>
@@ -57,10 +58,12 @@ phraze --version
 
 Finally use it anywhere
 
+- Default cartoon is pup
+
 ```sh
 phraze "Hello Guys"
 phraze "Hello Guys" homer
-echo "Hello Guys" | phraze
+echo "Hello Guys" | phraze 
 ```
 
 For full command usage see and to view all available characters -
@@ -79,19 +82,19 @@ npm install phraze --save
 
 Import the package
 
-```
+```js
 import { phraze } from 'phraze';
 ```
 
 Use the function
 
-```
+```js
 phraze("Your message here!",'pup');
 ```
 
 Function :-
 
-```
+```js
 phraze(<type your message here>,<character name here>)
 ```
 
@@ -99,7 +102,7 @@ phraze(<type your message here>,<character name here>)
 
 Want to publish your own ASCII art here for public usage?
 
-Look in Contributors.md for full detail.
+Look in `Contributors.md` for full detail. Plus you can take credit for your art.
 
 <h3 align="center">ASCII ART Credits</h3>
 

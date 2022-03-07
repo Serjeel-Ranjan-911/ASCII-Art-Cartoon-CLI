@@ -4,7 +4,7 @@ import { URL } from "url";
 import gradients from "./gradients.js";
 import { gradientsOptions } from "./gradients.js";
 
-export const phraze = async (message, ascii = "casper") => {
+export const phraze = async (message, ascii = "pup") => {
 	try {
 		//read data
 		let data = await readLocalFile(
