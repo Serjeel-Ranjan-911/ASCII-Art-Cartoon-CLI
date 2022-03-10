@@ -92,10 +92,27 @@ Use the function
 phraze("Your message here!",'pup');
 ```
 
+Alternatively, you may return a string instead of logging, passing a truthy 3rd argument:
+
+```js
+phraze("Your message here!",'pup', true);
+```
+
 Function :-
 
 ```js
-phraze(<type your message here>,<character name here>)
+phraze(<type your message here>,<character name here>,<returnMode optional boolean>)
+```
+
+## Use in require-based (CommonJS) project
+With nodejs >=13 you can consume this module using [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports) along returnMode
+
+```javascript
+const phraze = async (string, character) => {
+  return await import("phraze")
+	  .then(module => module.phraze(string, character = "pup", true))
+		.catch(error => error)
+};
 ```
 
 ## Contributors

@@ -4,7 +4,7 @@ import { URL } from "url";
 import gradients from "./gradients.js";
 import { gradientsOptions } from "./gradients.js";
 
-export const phraze = async (message, ascii = "pup", legacyMode = false) => {	
+export const phraze = async (message, ascii = "pup", returnMode = false) => {	
 		// get random gradient & print to sdtout
 		const colorPrint = (string) => {
 		const gradient = gradientsOptions[Math.floor(Math.random() * gradientsOptions.length)];
@@ -32,7 +32,9 @@ export const phraze = async (message, ascii = "pup", legacyMode = false) => {
 		//check if user gave us any message
 		if (message === undefined || message.trim() === "") {
 			message = "Give me some message to phraze";
-			if(legacyMode) return message;
+			if(returnMode){
+				return message;
+			}
 		}
 
 		// allocate boxed input & 'bubble slash'
@@ -44,7 +46,7 @@ export const phraze = async (message, ascii = "pup", legacyMode = false) => {
     const slash = " ".repeat(characterDetails.messageLeftMargin - 1) + "/"
 
 		// if third param is truthy, return uncolored output and don't print to stdout
-    if(legacyMode){
+    if(returnMode){
 			return `
 ${boxed}
 ${slash}
