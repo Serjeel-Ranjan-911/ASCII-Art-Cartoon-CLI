@@ -20,9 +20,9 @@ taketalk({
 	async help() {
 		console.log(`
 		Usage
-			$ phraze <string>
-			$ phraze <string> <character name>
-			$ echo <string> | phraze
+			$ phraze <string> // prints your message from pup
+			$ phraze <string> <character name> // prints your message from selected character 
+			$ phraze <string> <character name> true // returns the message as a string without any gradient colors
 		
 		Example
 			$ phraze 'Hi this is casper' casper
