@@ -4,12 +4,13 @@ import { URL } from "url";
 import gradients from "./gradients.js";
 import { gradientsOptions } from "./gradients.js";
 
-export const phraze = async (message, ascii = "pup", returnMode = false) => {	
-		// get random gradient & print to sdtout
-		const colorPrint = (string) => {
-		const gradient = gradientsOptions[Math.floor(Math.random() * gradientsOptions.length)];
-    console.log(gradients[gradient](string));
-		}
+export const phraze = async (message, ascii = "pup", returnMode = false) => {
+	// get random gradient & print to stdout
+	const colorPrint = (string) => {
+		const gradient =
+			gradientsOptions[Math.floor(Math.random() * gradientsOptions.length)];
+		console.log(gradients[gradient](string));
+	};
 
 	try {
 		//read data
@@ -25,14 +26,14 @@ export const phraze = async (message, ascii = "pup", returnMode = false) => {
 		}
 
 		//read the character from local file
-		let asciiCharater = await readLocalFile(
+		let asciiCharacter = await readLocalFile(
 			new URL(`./ASCII/${ascii}`, import.meta.url).pathname
 		);
 
 		//check if user gave us any message
 		if (message === undefined || message.trim() === "") {
 			message = "Give me some message to phraze";
-			if(returnMode){
+			if (returnMode) {
 				return message;
 			}
 		}
@@ -42,22 +43,17 @@ export const phraze = async (message, ascii = "pup", returnMode = false) => {
 			padding: 0.7,
 			margin: { left: characterDetails.messageLeftMargin },
 			borderStyle: "round",
-		})
-    const slash = " ".repeat(characterDetails.messageLeftMargin - 1) + "/"
+		});
+		const slash = " ".repeat(characterDetails.messageLeftMargin - 1) + "/";
 
-		// if third param is truthy, return uncolored output and don't print to stdout
-    if(returnMode){
-			return `
-${boxed}
-${slash}
-${asciiCharater}`;
-    }
-
-		// else color print to stdout
-		else {
-			colorPrint(boxed)
-			colorPrint(slash)
-      colorPrint(asciiCharater)
+		if (returnMode) {
+			// if third param is truthy, return uncolored output and don't print to stdout
+			return `${boxed}\n${slash}\n${asciiCharacter}`;
+		} else {
+			// else color print to stdout
+			colorPrint(boxed);
+			colorPrint(slash);
+			colorPrint(asciiCharacter);
 		}
 	} catch (err) {
 		colorPrint("Opps! Something went wrong\n");

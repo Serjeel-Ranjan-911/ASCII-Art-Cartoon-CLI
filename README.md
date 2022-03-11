@@ -31,7 +31,7 @@ This is an ASCII characters collection that you can use on your terminal.
     <img width="51%" src="./Extra/casper.png" alt="screenshot">
     <img width="48%" src="./Extra/fred.png" alt="screenshot">
     <img width="42%" src="./Extra/spongebob.png" alt="screenshot">
-    <img width="56%" src="./Extra/homer.png" alt="screenshot">
+    <img width="57%" src="./Extra/homer.png" alt="screenshot">
 </p>
 
 # Usage
@@ -63,7 +63,7 @@ Finally use it anywhere
 ```sh
 phraze "Hello Guys"
 phraze "Hello Guys" homer
-echo "Hello Guys" | phraze 
+echo "Hello Guys" | phraze
 ```
 
 For full command usage see and to view all available characters -
@@ -83,19 +83,19 @@ npm install phraze --save
 Import the package
 
 ```js
-import { phraze } from 'phraze';
+import { phraze } from "phraze";
 ```
 
 Use the function
 
 ```js
-phraze("Your message here!",'pup');
+phraze("Your message here!", "pup");
 ```
 
 Alternatively, you may return a string instead of logging, passing a truthy 3rd argument:
 
 ```js
-phraze("Your message here!",'pup', true);
+phraze("Your message here!", "pup", true);
 ```
 
 Function :-
@@ -105,13 +105,14 @@ phraze(<type your message here>,<character name here>,<returnMode optional boole
 ```
 
 ## Use in require-based (CommonJS) project
+
 With nodejs >=13 you can consume this module using [dynamic import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#dynamic_imports) along returnMode
 
 ```javascript
 const phraze = async (string, character) => {
-  return await import("phraze")
-	  .then(module => module.phraze(string, character = "pup", true))
-		.catch(error => error)
+	return await import("phraze")
+		.then((module) => module.phraze(string, (character = "pup"), true))
+		.catch((error) => error);
 };
 ```
 
@@ -119,7 +120,13 @@ const phraze = async (string, character) => {
 
 Want to publish your own ASCII art here for public usage?
 
-Look in `Contributors.md` for full detail. Plus you can take credit for your art.
+Look in `Contributors.md` for full detail. Plus you can add your name signature on your art and take credit for it.
+
+<h3 align="center">Built With</h3>
+
+<p align="center"> 
+    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node">
+</p>
 
 <h3 align="center">ASCII ART Credits</h3>
 
@@ -130,12 +137,6 @@ Look in `Contributors.md` for full detail. Plus you can take credit for your art
 
 </div>
 
-<h3 align="center">Built With</h3>
-
-<p align="center"> 
-    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node">
-</p>
-
 <h3 align="center">Supported By</h3>
 <div align="center">
 
@@ -143,4 +144,12 @@ Look in `Contributors.md` for full detail. Plus you can take credit for your art
 [gradient-string](https://github.com/bokub/gradient-string) |
 [taketalk](https://github.com/stephenplusplus/taketalk)
 
+</div>
+
+<div align="center">
+
+  <h3>Our Precious Contributors ❤️</h3>
+  <a href="https://github.com/Serjeel-Ranjan-911/ASCII-Art-Cartoon-CLI/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Serjeel-Ranjan-911/ASCII-Art-Cartoon-CLI" />
+  </a>
 </div>

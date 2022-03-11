@@ -7,8 +7,15 @@ import gradients from "./gradients.js";
 import { gradientsOptions } from "./gradients.js";
 
 taketalk({
-	init(input, options) {
-		phraze(input, options["_"][1]);
+	async init(input, options) {
+		let characterName = options["_"][1];
+		let returnMode = options["_"][2];
+		if(returnMode){
+			console.log(await phraze(input, characterName, true));
+		} 
+		else {
+			await phraze(input, characterName);
+		}
 	},
 	async help() {
 		console.log(`
@@ -25,7 +32,7 @@ taketalk({
 		);
 		const data = JSON.parse(file);
 
-		console.log("Try from the following chracters :- \n");
+		console.log("Try from the following characters :- \n");
 
 		//get random gradient
 		let gradient =
